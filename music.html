@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hackathon</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* navigation style*/
+        #nav ul {
+            list-style: none;
+            display: flex;
+            background-color: rgb(27, 25, 25);
+            width: 98vw;
+            position: fixed;
+        }
+
+        #nav ul li {
+            margin: 10px;
+        }
+
+        a:hover {
+            font-weight: 500;
+        }
+
+        #nav a {
+            padding: 20px 5px;
+            text-decoration: none;
+            color: rgb(220, 217, 212);
+            font-size: 18px;
+        }
+
+        /* first page style */
+        #page-1 {
+            background-image: url(music1p.avif);
+            background-size: cover;
+            height: 100vh;
+            width: 99vw;
+            display: grid;
+            place-content: center;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        #page-1 h1,
+        h2,
+        p {
+            text-align: center;
+            margin: 10px;
+        }
+
+        #page-1 h1 {
+            font-size: 50px;
+            margin: 0px 0px 50px 0px;
+        }
+
+        #page-1 h2 {
+            font-size: 40px;
+            margin: 40px;
+        }
+
+        #page-1 p {
+            font-size: 20px;
+            line-height: 0.9cm;
+        }
+
+        /* second page style*/
+        #page-2 {
+            height: 155vh;
+            width: 99vw;
+            display: grid;
+            place-content: center;
+            background-color: rgb(55, 51, 51);
+            color: white;
+        }
+
+        /*music logo in second page*/
+        #page-2 .mlogo {
+            height: 25px;
+            width: 25px;
+        }
+
+        #page-2 #posi {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 35px;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+
+        #page-2 h2 {
+            font-size: 35px;
+            font-family: sans-serif;
+            margin-top: 40px;
+        }
+
+        #page-2 p {
+            line-height: 1cm;
+            width: 80vw;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+
+        /*Trial button in page2*/
+        .trial {
+            height: 50px;
+            width: 150px;
+            background-color: red;
+            position: relative;
+            left: 600px;
+            display: grid;
+            place-content: center;
+        }
+
+        .trial a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* third page style*/
+        #page-3 {
+            width: 99vw;
+            height: 175vh;
+            background-color: lavender;
+            display: grid;
+            place-content: center;
+        }
+
+        #page-3 h1 {
+            margin: 20px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 35px;
+        }
+
+        #page-3 p {
+            line-height: 1cm;
+            font-size: 20px;
+            font-family: sans-serif;
+            width: 80vw;
+            color: rgb(49, 46, 46);
+        }
+
+        .re_mo {
+            margin: 20px;
+            height: 50px;
+            width: 100px;
+            background-color: blue;
+            display: grid;
+            place-content: center;
+            position: relative;
+            left: 600px;
+        }
+
+        .re_mo a {
+            text-decoration: none;
+            color: whitesmoke;
+        }
+
+        /*fourth page style*/
+        #page-4 {
+            height: 80vh;
+            width: 99vw;
+            background-image: url(music5.avif);
+            display: grid;
+            place-content: center;
+        }
+
+        #page-4 h1 {
+            margin: 30px;
+            width: 80vw;
+            font-family: sans-serif;
+            color: antiquewhite;
+            text-align: center;
+        }
+
+        #page-4 p {
+            line-height: 1cm;
+            width: 80vw;
+            font-size: 20px;
+            color: antiquewhite;
+            font-family: sans-serif;
+        }
+
+        /* gitt card style page*/
+        #page-5 {
+            background-color: lavender;
+        }
+
+        #giftpara {
+            margin-top: 50px;
+            height: 40%;
+            width: 50%;
+            float: left;
+            padding: 30px;
+        }
+
+        #giftpara p {
+            font-family: sans-serif;
+            font-size: 18px;
+            width: 600px;
+            text-align: left;
+            line-height: 1cm;
+        }
+
+        #giftpara h2 {
+            width: 550px;
+            text-align: left;
+        }
+
+        .p5img {
+            padding: 30px;
+            height: 40%;
+            width: 40%;
+            float: left;
+        }
+
+        /* footer style page*/
+        footer {
+            padding: 20px;
+            clear: left;
+            display: grid;
+            grid-template-columns: 200px 200px 300px 200px;
+            justify-content: center;
+            background-color: black;
+        }
+
+        .foot-box {
+            padding: 10px;
+            margin: 5px;
+            color: white;
+        }
+
+        .foot-box a {
+            color: rgb(183, 177, 177);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .foot-box li {
+            list-style: none;
+            margin: 5px 0px;
+        }
+
+        .foot-box hr {
+            margin: 10px 0px;
+        }
+
+        /* Copyright style page*/
+        #cpr {
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(82, 80, 80);
+            color: azure;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav">
+        <ul>
+            <li><a class="a-sty" href="">myTunes</a></li>
+            <li><a class="a-sty" href=""> Overview</a></li>
+            <li><a class="a-sty" href=""> Music</a></li>
+            <li><a class="a-sty" href=""> Video</a></li>
+            <li><a class="a-sty" href=""> Gift Cards</a></li>
+        </ul>
+    </nav>
+    <div id="page-1">
+        <div class="pgcd">
+            <h1 class="cen siz">myTunes</h1>
+            <h2 class="cen siz2">Your music,movies,and TV shows take center stage.</h2>
+            <p class="cen para">myTunes is the best way to organize and enjoy the music,movies,and TV
+                shows you already have-and shop for the ones you want.Enjoy all the <br>
+                entertainment myTunes has to offer on your Mac and PC.</p>
+        </div>
+    </div>
+    <div id="page-2">
+        <div id="posi">
+            <img class="mlogo" src="icon.svg" alt=""><span class="mlogo"> Music</span>
+        </div>
+        <h2 class="siz2">45 million songs.Zero ads.</h2>
+        <p class="para">Stream over 45 million songs,ad-free. Or download albums and tracks to listen to offline.All the
+            music in
+            your personal muTunes library-no matter where it came from -liveright alongside the Orange Music
+            catalog.Start your free three-month trial with no commetment,and cancel anytime.</p>
+        <div class="trial">
+            <a href="">Start Your Trial Now</a>
+        </div>
+        <p class="para">Orange Music is available in myTunes, and for iOS and Android devices.</p>
+        <img src="music2.png" alt="">
+    </div>
+    <div id="page-3">
+        <h1>The movie and TV collection you always wished for. Granted.</h1>
+        <p class="para">With over 100,000 movies and TV shows to choose from, there’s always something great to watch on
+            myTunes and
+            if you watch on Orange TV 4K, you’ll be able to enjoy a tremendous selection of your favorite content in 4K
+            HDR. So get ready to enjoy episodes of your favorite TV shows or hit movies you’ve been waiting to see —
+            anytime, anywhere. Just tap to play, or even download if you’re going somewhere you won’t have Wi-Fi.</p>
+        <div class="re_mo"><a href="">Read More</a></div>
+        <img src="mockup2.png" alt="">
+    </div>
+    <div id="page-4">
+        <h1>A world of entertainment. Available wherever you are.</h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam nobis, nisi ut
+            expedita, doloribus
+            reprehenderit explicabo non velit repellat alias saepe inventore repellendus? Molestias suscipit eos
+            tempora? Quae quaerat cumque in veritatis impedit dolorum sapiente recusandae minima quo aperiam quam,
+            excepturi quasi totam ad quas? Ipsam laudantium soluta delectus! </p>
+    </div>
+    <div id="page-5">
+        <img class="p5img" src="cards.png" alt="">
+        <div id="giftpara">
+            <h2>Gift Cards</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque expedita tempore quasi omnis a aut et
+                totam
+                illo fuga accusamus dolorum vero, ut harum consectetur. Minima molestias officiis culpa non sed dicta
+                itaque. Et aliquam illo obcaecati molestias veritatis porro.</p>
+            <p class="para">Already have an Orange MyTunes Music Gift Card?</p>
+            <hr>
+        </div>
+    </div>
+    <footer>
+        <div class="foot-box">
+            <ul>
+                <li>
+                    <h3>Shop & Learn</h3>
+                </li>
+                <hr>
+                <li><a href="">Music</a></li>
+                <li><a href="">Movies</a></li>
+                <li><a href="">Shows</a></li>
+                <li><a href="">Apps</a></li>
+                <li><a href="">Gift Cards</a></li>
+            </ul>
+        </div>
+        <div class="foot-box">
+            <ul>
+                <li>
+                    <h3>Orange Store</h3>
+                </li>
+                <hr>
+                <li><a href="">Find a Store</a></li>
+                <li><a href="">Today at Orange</a></li>
+                <li><a href="">Orange camp</a></li>
+                <li><a href="">Financing</a></li>
+                <li><a href="">Order Status</a></li>
+            </ul>
+        </div>
+        <div class="foot-box">
+            <ul>
+                <li>
+                    <h3>Education & Business</h3>
+                </li>
+                <hr>
+                <li><a href="">Orange & Education</a></li>
+                <li><a href="">Shop for College</a></li>
+                <li><a href="">Orange & Business</a></li>
+                <li><a href="">Shop For Business</a></li>
+                <li><a href="">Jobs</a></li>
+            </ul>
+        </div>
+        <div class="foot-box">
+            <ul>
+                <li>
+                    <h3>About Orange</h3>
+                </li>
+                <hr>
+                <li><a href="">Newsroom</a></li>
+                <li><a href="">Orange Leadership</a></li>
+                <li><a href="">Investors</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div id="cpr">
+        Copyright © 2019 Orange myTunes
+    </div>
+</body>
+
+</html>
